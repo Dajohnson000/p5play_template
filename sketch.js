@@ -34,8 +34,12 @@ function draw() {
   if (dizzy.mouse.pressed()) recipe = recipe + " dizzy";
   if (mad.mouse.pressed()) recipe = recipe + " mad";
   text(answer, 150, 125);
+  if (check.mouse.pressed()) answerKey();
+  if (youWon === true){
+        text('YOU WON', 300, 400)
+  }
 }
-function keyPressed() { 
+function answerKey() { 
     console.log(recipe);
     console.log(answer);
     youWon = recipe === answer ? true : false;
